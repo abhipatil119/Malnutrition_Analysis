@@ -1,4 +1,4 @@
-from gremlin_python.driver import client, serializer, protocol
+   from gremlin_python.driver import client, serializer, protocol
 from gremlin_python.driver.protocol import GremlinServerError
 import sys
 import traceback
@@ -40,11 +40,11 @@ for x in df_countries.index:
 df_countries_final = pd.DataFrame(l)
 df_countries_final.columns = ['Country','Overweight', 'Stunting', 'Underweight']
 
-#Create Dataframe for Continent and Country edge
+#Create Dataframe for Continent , Country edge
 df_cont_country=df_survey[['Continents','Country']] #.groupby(['Sub_Contitent'])
 df_cont_country=df_cont_country.drop_duplicates().reset_index()[['Continents','Country']]
 
-#Create Dataframe for Continent and Sub-Continent edge
+#Create Dataframe for Continent , Sub-Continent edge
 df_cont_sub=df_survey[['Continents','Sub_Continents']] #.groupby(['Sub_Contitent'])
 df_cont_sub=df_cont_sub.drop_duplicates().reset_index()[['Continents','Sub_Continents']]
 
